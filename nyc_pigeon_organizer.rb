@@ -4,13 +4,13 @@ def nyc_pigeon_organizer(data)
   data.each do |key, value|
     value.each do |traits, pigeon_name|
       pigeon_name.each do |name|
-        if pigeon_list[name] == nil
-          pigeon_list[name] = {}
+        if new_list[name] == nil
+          new_list[name] = {}
         end
-        if pigeon_list[name][key] == nil
-          pigeon_list[name][key] = []
+        if new_list[name][key] == nil
+          new_list[name][key] = []
         end
-        pigeon_list[name][key].push(traits.to_s)
+        new_list[name][key].push(traits.to_s)
       end
     end 
   end
